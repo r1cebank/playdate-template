@@ -14,7 +14,8 @@ build: clean compile run
 run: open
 
 clean:
-	rm -rf '$(GAME).pdx'
+	rm -rf 'builds'
+	mkdir builds
 
 compile: source/main.lua
 	"$(SDKBIN)/pdc" 'source' 'builds/$(GAME).pdx'
